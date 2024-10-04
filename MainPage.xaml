@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="miau_app.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Entry x:Name="Name"
+                Placeholder="Imie"
+                TextChanged="OnNameTextChanged"
+                Completed="OnNameCompleted" />
+            <Entry x:Name="Surname"
+                Placeholder="Nazwisko"
+                TextChanged="OnSurnameTextChanged"
+                Completed="OnSurnameCompleted" />
+            <Entry x:Name="PhoneNumber"
+                Placeholder="Numer telefonu"
+                TextChanged="OnPhoneNumberTextChanged"
+                Completed="OnPhoneNumberCompleted"
+                MaxLength="12"
+                Keyboard="Telephone"/>
+            <Button Text="Send"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Clicked="OnButtonSendClicked" />
+            <Label x:Name="newLabel"
+                   Text="Wprowadzone dane:"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
